@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <!-- 添加 animation-mixer 組件支持 -->
+    <script src="https://unpkg.com/aframe-extras@7.0.0/dist/aframe-extras.min.js"></script>
+  </head>
+  <body>
+    <a-scene embedded arjs>
+      <a-marker
+        type="pattern"
+        url="https://cdn.glitch.global/b6f4f057-b20c-4823-a6e0-e9bf0c9161e1/pattern-marker.patt?v=1741176759163"
+      >
+        <a-entity
+          gltf-model="url(https://cdn.glitch.global/b6f4f057-b20c-4823-a6e0-e9bf0c9161e1/Alpaca.glb?v=1741230732997)"
+          position="0 0 0"
+          scale="0.2 0.2 0.2"
+          rotation="0 90 0"
+          animation-mixer="clip: Walk; loop: true; timeScale: 2"
+        ></a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
